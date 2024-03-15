@@ -1,0 +1,47 @@
+Define productContainer as the element with the ID 'productContainer'
+Define cartContainer as the element with the ID 'cartContainer'
+Define cartProductContainer as the element with the ID 'cartProductContainer'
+
+Define an array named products containing product objects with properties: id, name, price, discountedPrice, imageUrl
+Define an empty array named cartProducts
+
+Function addToCart(productId):
+    Find the product object from the products array where the id matches productId
+    Add the found product object to the cartProducts array
+    Render the cart items again to update the display
+
+Function removeFromCart(productId):
+    Find the index of the product to remove in the cartProducts array where the id matches productId
+    If the product is found (index !== -1), remove it from the cartProducts array
+    Render the cart items again to update the display
+
+Function renderProducts(data):
+    For each product in the data array:
+        Create a new div element named 'card'
+        Set the id of the card to the product's id
+        Add the class 'product-card' to the card
+        Extract product details such as imageUrl, price, discountedPrice, and name
+        Create HTML markup for the card with product details and an 'Add to Cart' button
+        Append the card to the productContainer
+
+Function renderCartItem(data):
+    Clear the cartProductContainer
+    If the length of the data array is 0:
+        Create a new div element named 'cart'
+        Add the class 'cart' to the cart
+        Append the cart to the cartContainer
+        Create a new paragraph element named 'emptyCart'
+        Add the class 'empty-cart-text' to emptyCart
+        Set the text content of emptyCart to 'Your Cart is Empty'
+        Append emptyCart to the cart
+    Else:
+        For each product in the data array:
+            Create a new div element named 'card'
+            Set the id of the card to the product's id
+            Add the class 'product-card' to the card
+            Extract product details such as imageUrl, price, discountedPrice, and name
+            Create HTML markup for the card with product details and a 'Remove from Cart' button
+            Append the card to the cartProductContainer
+
+Call renderProducts function passing products array as argument
+Call renderCartItem function passing cartProducts array as argument

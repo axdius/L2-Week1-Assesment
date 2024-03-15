@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="product-section">
+            <h1 class="heading">Our Products</h1>
+            <div id="productContainer" class="product-container"></div>
+        </div>
+        <div class="cart-section">
+            <h1 class="heading">Cart</h1>
+            <div class="cart-container" id="cartContainer">
+                <div class="sorting-section">
+                    <input class="search" placeholder="Enter a Price" type="search" name="products" id="products">
+                    <div class="some">
+                        <select name="" id="" class="select">
+                            <option value="" disabled selected hidden>Sort by</option>
+                            <option value="ascending" class="options">Ascending</option>
+                            <option value="descending" class="options">Descending</option>
+                        </select>
+                        <button class="clear-cart-button" >Clear Cart <img src="https://res.cloudinary.com/dfsppvj1s/image/upload/v1710495947/cross_button_otwslw.png" class="cross" /></button>
+                    </div>
+                </div>
+                <div class="product-container" id="cartProductContainer" ></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
